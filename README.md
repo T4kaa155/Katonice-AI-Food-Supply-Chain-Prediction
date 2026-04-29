@@ -1,55 +1,110 @@
-# KatoNice AI - Supply Chain Intelligence
+# KatoNice AI – Food Supply Chain Intelligence
 
 ## Deskripsi
-KatoNice adalah sistem berbasis AI untuk menganalisis dan memprediksi stabilitas rantai pasok pangan di Indonesia, dengan fokus pada integrasi data produksi, lingkungan, distribusi, dan permintaan pasar.
+KatoNice AI adalah solusi berbasis Artificial Intelligence yang bertujuan untuk menganalisis dan memprediksi harga pangan berdasarkan faktor supply-demand, kondisi lingkungan, dan distribusi logistik.
 
----
-
-## Dataset
-Dataset terdiri dari dua jenis:
-
-- **Raw Dataset**
-  - Mengandung missing value, duplicate, dan anomali
-  - Merepresentasikan kondisi data nyata
-
-- **Clean Dataset**
-  - Sudah melalui proses data cleaning
-  - Digunakan untuk model AI
-
----
-
-## Metodologi
-1. Data Collection
-2. Data Cleaning
-3. Feature Engineering (gap = supply-demand)
-4. Model Machine Learning (Random Forest)
-5. Evaluation & Insight
-
----
-
-## Model
-Model yang digunakan:
-- Random Forest Regressor
-
-Target:
-- Prediksi harga komoditas
-
----
-
-## Insight
-- Supply-demand gap menjadi faktor utama harga
-- Ketidakseimbangan distribusi menyebabkan fluktuasi
-- Faktor lingkungan berpengaruh terhadap produksi
-  
----
-
-## Tools
-- Python
-- Pandas
-- Scikit-learn
-- Matplotlib
+Sistem ini dirancang untuk membantu menjaga stabilitas harga pangan serta meningkatkan efisiensi rantai pasok agrikultur.
 
 ---
 
 ## Tujuan
-Meningkatkan efisiensi distribusi, mengurangi food waste, dan menjaga stabilitas harga pangan melalui pendekatan data-driven.
+- Menganalisis faktor yang mempengaruhi harga pangan
+- Mengidentifikasi ketidakseimbangan supply-demand
+- Membangun model prediksi harga berbasis AI
+- Memberikan insight strategis untuk stabilisasi harga
+
+---
+
+## Dataset
+Dataset yang digunakan bersifat sintetis realistis dan merepresentasikan kondisi dunia nyata, meliputi:
+
+- Lokasi
+- Komoditas
+- Tanggal
+- Suhu
+- Curah hujan
+- pH tanah
+- Produksi (kg)
+- Permintaan (kg)
+- Harga (per kg)
+- Distribusi (jam)
+
+
+---
+
+## Metodologi
+
+### 1. Exploratory Data Analysis (EDA)
+- Analisis missing value, duplikasi, dan anomali
+- Visualisasi distribusi data
+- Analisis korelasi antar variabel
+
+### 2. Data Cleaning
+- Imputasi missing value
+- Penghapusan duplikasi
+- Filtering data anomali
+
+### 3. Feature Engineering
+- Pembuatan fitur **gap (produksi - permintaan)**
+- Ekstraksi bulan dari tanggal
+
+### 4. Modeling
+Model yang digunakan:
+- **Random Forest Regressor**
+
+Evaluasi model:
+- RMSE
+- MAE
+- R² Score
+
+---
+
+## Hasil Model
+
+- Model mampu memprediksi harga dengan akurasi tinggi
+- Nilai R² mendekati 1 menunjukkan performa yang sangat baik
+- Prediksi mengikuti pola data aktual dengan baik
+
+---
+
+## Insight
+
+- Supply-demand gap merupakan faktor utama yang mempengaruhi harga
+- Ketika permintaan lebih tinggi dari produksi, harga meningkat
+- Distribusi dan faktor lingkungan turut mempengaruhi stabilitas harga
+
+---
+
+## Insight Strategis
+
+- Jika gap negatif → perlu tambahan distribusi/impor
+- Jika gap positif → distribusi ke wilayah kekurangan
+- Monitoring harga dapat dilakukan secara real-time dengan AI
+
+---
+
+## Implementasi Azure
+
+Solusi ini dirancang untuk dapat di-deploy menggunakan layanan Microsoft Azure:
+
+- **Azure Machine Learning** → training & deployment model
+- **Azure Blob Storage** → penyimpanan dataset
+- **Azure App Service** → API prediksi real-time
+
+### Arsitektur:
+User → API → Model → Prediksi Harga
+
+Sistem ini memungkinkan monitoring harga pangan secara scalable dan real-time.
+
+---
+
+## Pipeline Sistem
+
+1. Data dikumpulkan
+2. Data dibersihkan
+3. Feature engineering dilakukan
+4. Model dilatih
+5. Model disimpan (model.pkl)
+6. Model digunakan untuk prediksi
+
+---
