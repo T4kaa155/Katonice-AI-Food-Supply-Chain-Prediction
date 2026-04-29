@@ -40,19 +40,7 @@ Target:
 - Supply-demand gap menjadi faktor utama harga
 - Ketidakseimbangan distribusi menyebabkan fluktuasi
 - Faktor lingkungan berpengaruh terhadap produksi
-
----
-
-## Struktur Project
-katonice-ai/
-├── data/
-    └── katonice_dataset_clean.csv
-    └── katonice_dataset_realistic_raw.csv
-├── notebooks/
-├── models/
-├── src/
-└── README.md
-
+  
 ---
 
 ## Tools
