@@ -1,4 +1,4 @@
-# Prototype Aplikasi (Visual MVP)
+# Prototype Aplikasi
 
 Prototype ini merupakan tampilan awal (visual design) dari sistem AI Food Supply Chain yang dikembangkan.
 
