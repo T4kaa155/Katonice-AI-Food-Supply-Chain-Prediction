@@ -34,5 +34,5 @@ Prototype ini bertujuan untuk:
 - Fitur monitoring & notifikasi otomatis
 - Sistem rekomendasi berbasis AI
 
-## ⚙️ Catatan
+## Catatan
 File prototype disimpan di Google Drive karena ukuran file yang cukup besar.
